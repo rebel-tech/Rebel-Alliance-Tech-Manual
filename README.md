@@ -1,5 +1,6 @@
 #Rebel Alliance Tech Manual
 
+### Dated: Jan 12th, 2017
 ----
 
 There are many texts that list off a few tools or programs they advise people to use while trying to hide context and considerations so as to not overwhelm. These texts usually target "normal people" and or professionals (like journalists and lawyers) who tend to be entitled and adverse to learning new things. Instead this text is geared towards activists and dissidents who are already self-motivated and want to be fully prepared for serious repression from authoritarian regimes. Specifically it intends to address common usecases and threats radical activists and dissidents face and answer every question commonly asked at trainings for radical activists and dissidents.
