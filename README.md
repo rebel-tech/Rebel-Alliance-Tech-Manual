@@ -602,9 +602,10 @@ This enables you to send unencrypted emails that unambiguously came from you and
 
 
 ##Signing Psuedononymous Communiques
-{fill in this section}
-	gnu privacy assistant
-	cleopatra on mac
+
+One major use that GPG can have for activists is to certify which actions were actually committed by a group. (To avoid being falsely accused of other actions.)
+
+You can sign the text of communiques using GPG without using email. And there are tools like gnu privacy assistant and cleopatra on mac that provide graphical interfaces for GPG to generate keys and manually sign (or encrypt) texts you want to be released. This provides your activist group with strong authentication of their communiques or statements.
 
 
 
@@ -800,7 +801,7 @@ But just to be safe before posting any file publicly activist organizations shou
 
 Microsoft offers a "Document Inspector" for removing "personal or sensitive information" before you share an Office file. Windows lets you view and delete metadata from a file via the Properties dialog box. The quickest way is to click Properties > Details > Remove Properties and Personal Information > "Create a copy with all possible properties removed."
 
-
+Metadata even exists in physical media like on printed pamphlets. Printers are built to add tiny unique dots of almost invisible (usually light yellow) ink to what you print. These dots are arranged in patterns that link a document to a printer. This was originally added as part of a deal between the US Secret Service and printer manufacturers to help track down counterfeiters. We suggest getting a printer from a yard sale or recycling space and buying ink cartridges for it in cash.
 
 
 ##OTR messengers (the shit talk section)
