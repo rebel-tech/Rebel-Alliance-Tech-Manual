@@ -601,7 +601,7 @@ This enables you to send unencrypted emails that unambiguously came from you and
 
 
 
-##Signing Psuedononymous Communiques
+##Signing Pseudonymous Communiques
 
 One major use that GPG can have for activists is to certify which actions were actually committed by a group. (To avoid being falsely accused of other actions.)
 
@@ -902,6 +902,26 @@ Again be aware that an email provider can't truly protect your email in transit 
 It's important to note that when you allow someone else to back your data up for you on their devices (because that's what "the cloud" is, just other people's computers), you're giving them a hell of a lot of trust.
 
 We would advise against using another party's service to backup your computer.  But we also recognize that many people are insistant upon using one. So if you're going to use a backup service, Spideroak is the best. Their program claims to encrypts your data on your own computer before sending to their servers and never sends the key. But Spideroak is not fully open source and this is concerning given that you're trusting them with everything.
+
+
+
+##Collaborative Editing Software
+
+There is at present no good option for activists to edit documents securely over the internet. Every option has downsides.
+
+1) Use etherpad, there's a publicly hosted version at pad.riseup.net. If you enter a sufficiently random and long enough URL when creating your etherpad then it might be hard for some random visitor to Riseup.net to guess your pad. Since pad.riseup.net is served over HTTPS you get some very mild level of encryption -- an observer that can't break HTTPS or give itself an X509 Certificate wouldn't be able to see precisely *what* page or URL you were visiting at pad.riseup.net, however again basically any government can trivially break HTTPS (and a lot of non government actors too).
+
+2) Use Google docs. Ooph. Trusting Google is obviously not fucking remotely optimal. If you're gonna do this we suggest everyone using a gmail account they set up completely anonymously over Tor for the exclusive purpose of collaborative editing. And only access the google doc and that email over Tor. Still if some NSA goon ran an algorithm to find suspicious content or identify some keywords in your document they could get Google to insert malware into the page so when you access the google doc they try to hack you through your Tor browser. And obviously you can't use a Google doc with javascript turned off in Tor.
+
+3) Use SpiderOak. If you're already using Spideroak to backup your files online with some measure of security then this is an easy choice. You can create a ShareRoom by choosing any number of folders from several of your computers. A ShareRoom may be accessed as a unique web URL or by entering a user's ShareID and RoomKey on the SpiderOak homepage – easily allowing people you invite to view your documents, pictures, movies, and so on. As you make additions or edits to the folders within a ShareRoom (no matter what computer those changes are made on), the changes are automatically updated to the ShareRoom. However there may be conflicts if multiple people are editing a file at the same time.
+
+4) Use SpiderOak Semaphor. This is supposedly a software platform SpiderOak has developed for business teams to collaborate. It sounds promising but is still very new and insufficiently tested.
+
+5) Use OwnCloud. If someone in your group has serious technical skills they can set up a private server and run an open source program called OwnCloud that offers collaborative document editing over encryption. However this is extremely new and unvetted software. https://owncloud.org/
+
+6) Use Gobby. If everyone in your group has some technical skills then you can download the open source program Gobby which provides a client (an app on your computer) and a server. Everyone downloads a text editor and one person sets up a server, then folks connect and edit within the text editor app, presumably securely. However this is extremely new and unvetted software. https://gobby.github.io/
+
+We wish there were better or more developed options. Absolutely do not use any of these if you are facing high security threats (ie likely FBI investigation). Remember that the ease of a tool can be seductive and encourage bad security decisions.
 
 
 
@@ -1215,6 +1235,11 @@ This is like a poor-man's Van Eck Phreaking, basically you just use some analysi
 
 ###satellite visual survellience
 Okay so what do you do if they're literally watching you from space? Well this is a low likelihood for activists in the present and the immediate future, basically because it costs a lot to use active spy satellites just to surveil individuals. But one could certainly imagine this cost decreasing as well as a modern fascist government turning its military spy satellites on domestic dissidents. The more reasonable usecase might be that they identify a house as being a site of dissident activism and then track people and cars going too and from it to identify them and their destinations. So even if you don't bring your phone you could still get tracked. We're necessarily forced into speculation as to best avoidance strategies, but in many ways this is just an extreme case of the normal CCTV camera surveillence networks. The same general obfuscation and counter-surveillence tactics apply. Trade cars in a parking garage. Go into a crowded public place and swap into a different change of clothes. Use a different style of walking. Be aware that it may not be enough to hide in the woods because your heat signature may be visible through the trees.
+
+
+###Quantum Computers, Shor and Grover's Algorithms
+
+Quantum mechanics isn't magic and almost everything said about it in popular layman discourse is wildly off basis, this includes claims that quantum computers will break everything. Although they will break some types of encryption. The "weirdness" of quantum mechanics is in essence just that we learned that contrary our intuitions and daily experience the universe actually calculates probability using complex numbers rather than just real numbers, every single "weird" thing in quantum mechanics directly arises from this single mathematical quirk. No wild philosophical conclusions required. Unfortunately it may soon (in matter of years) be possible to build a computer that operates on such a small scale as to take adantage of these probabilities that extend into the complex plane. When finally achieved there are a couple fancy algorithms that can take advantage of this unique behavior to speed up some specific computations. Shor's Algorithm makes factoring numbers much much easier and Grover's algorithm makes searching for an entry in a database faster. Basically Shor will break many popular classical ways of doing public key crypto, and Grover will make forms of symmetric key crypto behave as though their key was half as long. Symmetric key crypto is easy to save, just double the length of the encryption key! To save public key crypto we will need to adopt ciphers that rely upon hard mathematical problems that quantum mechanics don't make it a snap to solve. People are already implementing solutions to both. But the takeaway for activists is that -- worst case -- some of your present encrypted communications might be decryptable by the NSA in 10 years time anyway.
 
 
 
