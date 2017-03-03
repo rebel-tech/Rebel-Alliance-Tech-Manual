@@ -66,7 +66,7 @@ Let's say that your group is organizing a project or a protest and needs to meet
 
 But! Then something changes and you suddenly need to schedule an emergency meeting at a time and place that hasn't been decided upon prior. You can try to literally drive around from house to house doing meetings one-on-one and relaying information piecemeal about best times that work for individual people. But now you're introducing all kinds of additional work that makes arranging the meeting between everyone almost impossible. So your group either doesn't meet in a timely fashion. Or you say "fuck it all internet security is impossible" and just text message or call one another the normal unencrypted way. However this increases the chance that the cops will infiltrate.
 
-On the other hand you could use Signal. The cops will know that you're all talking together. And there's a chance they could backdoor one of your phones (in addition to tracking it), but the odds of that are much lower, and so there's a good chance you could speak both semi-securely and productively about meeting locations and times.
+On the other hand you could use Signal. The cops could figure out that you're all talking together. And there's a chance they could backdoor one of your phones (in addition to tracking it), but the odds of that are much lower, and so there's a good chance you could speak both semi-securely and productively about meeting locations and times.
 
 ----
 
@@ -74,7 +74,7 @@ We give these examples to encourage you to learn more about the lay of the land 
 
 That said, let us be clear that almost every tool or program a normal person uses by default is horribly broken. Often this is by design. While the internet and communications technologies have immense potential for liberation and can be leveraged to great effect, our digital infrastructure is itself a site of political conflict. For decades authoritarians have sought to normalize insecure tools and standards.
 
-Many people are surprised to learn that it's trivial for the police to access everything you've put on your social media profile or sent in messages from it, regardless of your "security settings." Similarly the "incognito mode" advertised on your browser is basically meaningless; the sites you visit, as well as your identity and location are all exposed to the world, and certainly to the government or any diligent adversary. To make matters worse the padlock that sometimes appears the corner of your browser's address bar means almost nothing and certainly doesn't protect you against the government.
+Many people are surprised to learn that it's trivial for the police to access everything you've put on your social media profile or sent in messages from it, regardless of your "security settings." Similarly the "incognito mode" advertised on your browser is basically meaningless; the sites you visit, as well as your identity and location are all exposed to the world, and certainly to the government or any diligent adversary. To make matters worse the padlock that sometimes appears the corner of your browser's address bar means very little and certainly doesn't protect you against the government.
 
 Most applications out there that advertise as offering encryption are either snake oil, unverifiable, or have not gotten sufficient attention by experts. There is however a very large and diverse community of activists, cryptographers, and security experts who have come to a consensus on some best tools and practices.
 
@@ -110,7 +110,7 @@ Public key encryption is the bit of mathematical magic that the internet and our
 
 If you want to get a better grasp on how public key encryption works in all our fancy programs read on. However if you're happy with the above explanation then feel free to skip the next section of elementary math.
 
-One common example of a one-way function is factorization; it's relatively easy to take a set of prime numbers (numbers that can't be divided by anything besides themselves and 1) and multiply them together ( 2 x 2 x 3 x 7 x 23 = 1932 ) but it's a lot harder to take a large number and find out what prime numbers have to be multiplied together to make it. You might think of yourself having to do trial-and-error dividing the number by all possible primes again and again...
+One common example of a one-way function is factorization; it's relatively easy to take a set of prime numbers (numbers that can't be divided by anything besides themselves and 1) and multiply them together ( 37 x 41 = 1517 ) but it's a lot harder to take a large number and find out what prime numbers have to be multiplied together to make it. You might think of yourself having to do trial-and-error dividing the number by all possible primes again and again...
 
 One of the most common and famous examples of asymmetric encryption is actually something that can be understood if you know how to do exponentiation. It goes something like this:
 
@@ -197,13 +197,13 @@ However unlike encryption this kind of anonymity is not a sure thing. We have go
 
 If you use something like Tor to check a Facebook account under your own name then obviously anyone at the end of that connection can see that you're online, that you're connecting to Facebook and probably what you're doing on Facebook. What they probably won't see however is *where* you're connecting to Facebook from. So for example activists on the run from the Syrian government could still check Facebook without revealing what city they were staying in as they fled. 
 
-Similarly if you use Tor to look up weather in your city then someone watching could easily figure out that you are a Tor user in that city, but if you're not doing anything connected to your personal identity they may not know *who* you are.
+Similarly if you use Tor to look up weather in your city then someone watching could easily figure out that you are a Tor user in that city, but if you're not doing anything connected to your personal identity they may not know *who* you are. Tor Browser separates your connections to Facebook and the weather site by using different paths through the Tor Network for each one, making it relatively safe to do both at the same time.
 
 However no technology is a magic bullet for anonymity. If you use Tor to post a statement and sign your name on that statement that statement is obviously not anonymous. Similarly if you create and upload an image in that statement, but it was created on your computer your image software may have automatically added your username to that image "to be helpful!" thus possibly revealing who you are. Your prior posts online may even be useable to identify you by your writing style. If you're on the run and you don't log in to any account connected to you but you do keep the same browsing habits (eg visit the same unique set of webcomics) they could concievably identify you by them. We don't know of any activist anywhere who's been decloaked by writing style or favorite webcomics, but those are the sort of possibilities to keep in mind.
 
 
 
-##Steganography & Censorship Circumvention
+##Steganography, Obfuscation & Censorship Circumvention
 
 Often the problem isn't even hiding who you are, it's just finding any way to get online past a censor -- or *hiding* that you're doing anything encrypted. Encrypted communications are usually quite obviously encrypted and sometimes you can't risk anyone seeing that you're using encryption.
 
@@ -213,7 +213,7 @@ One classic example of steganography in the electronic era is to make small chan
 
 There are at present a huge array of tools online claiming to provide steganography. We advise extreme caution about almost all of them. None of these tools is fully mature, but they are also probably the future of struggle between users and authoritarian governments.
 
-TorBrowser provides the option of some limited steganography to hide that you're using Tor from censors and firewalls that try to spy on your traffic to the internet. Note that this just hides your connection to the Tor network, it does not hide that you're using Tor from the sites you visit! To enable such "pluggable transports" click "configure" when setting up TorBrowser and select yes under "Does Your ISP block Tor?" then select a type of bridge and click connect.
+TorBrowser provides the option of some limited obfuscation to hide that you're using Tor from censors and firewalls that try to spy on your traffic to the internet. Note that this just hides your connection to the Tor network, it does not hide that you're using Tor from the sites you visit! To enable such "pluggable transports" click "configure" when setting up TorBrowser and select yes under "Does Your ISP block Tor?" then select a type of bridge and click connect.
 
 
 
@@ -258,7 +258,7 @@ Some additional notes:
 
 * Your Signal app gets updates from the folks who write the Signal codebase. So you have to trust the developers and the other hackers checking their public code. However the Signal devs are a bunch of anarchists with long histories and wide networks of friends you're probably connected to, and the code they write has been checked and enthusiastically signed off on by all the top experts.
 
-* Signal's encryption uses "perfect forward secrecy" which means that if they get your private encryption keys months later by seizing your unlocked device they still can't retroactively decrypt prior conversations.
+* Signal's encryption uses "perfect forward secrecy" which means that if they get your private encryption keys months later by seizing your unlocked device they still can't retroactively decrypt prior conversations that they may have recorded in encrypted form. Of course if those past conversations haven't been deleted on your device and are still visible then they can still read them.
 
 
 ###Installation
@@ -423,13 +423,12 @@ And Lucy Parsons Labs (ucyparsonslabs.com/securedrop) with their hidden service:
 
 A larger list of newspapers and organization can be found by going to securedrop.org/directory
 
-###TorMessenger, Ricochet, and Torbirdy
+### Ricochet and Torbirdy
 
-Tor Messenger is a cross-platform chat program that aims to be secure by default and sends all of its traffic over Tor. It supports a wide variety of transport networks, including Jabber (XMPP), IRC, Google Talk, Facebook Chat, Twitter, Yahoo, and others; enables Off-the-Record (OTR) Messaging automatically; and has an easy-to-use graphical user interface localized into multiple languages. Tor Messenger builds on the networks you are familiar with, so that you can continue communicating in a way your contacts are willing and able to do. This has traditionally been in a client-server model, meaning that your metadata (specifically the relationships between contacts) can be logged by the server. However, your route to the server will be hidden because you are communicating over Tor. TorMessenger is still a tool in Beta and *is not recommended for anything serious whatsoever*.
+Ricochet is a cross-platform chat program that uses Tor, Ricochet uses the Tor network to reach your contacts without relying on messaging servers. It creates a hidden service, which is used to rendezvous with your contacts without revealing your location or IP address. Instead of a username, you get a unique address that looks like ricochet:rs7ce36jsj24ogfw. Other Ricochet users can use this address to send a contact request - asking to be added to your contacts list. Ricochet is likewise a tool in Beta development and *is not recommended for anything serious whatsoever*.
 
-Ricochet is another cross-platform chat program that uses Tor, but unlike Tor Messenger does not connect to established chat networks (like GoogleTalk, Facebbok, Yahoo), Ricochet rather uses the Tor network to reach your contacts without relying on messaging servers. It creates a hidden service, which is used to rendezvous with your contacts without revealing your location or IP address. Instead of a username, you get a unique address that looks like ricochet:rs7ce36jsj24ogfw. Other Ricochet users can use this address to send a contact request - asking to be added to your contacts list. Ricochet is likewise a tool in Beta development and *is not recommended for anything serious whatsoever*.
+TorBirdy is an extension for Mozilla Thunderbird that configures it to make connections over the Tor network. Think of it as Torbutton for Thunderbird. Unfortunately while this is necessary technology for many activists, TorBirdy is poory maintained and has known issues.
 
-TorBirdy is an extension for Mozilla Thunderbird that configures it to make connections over the Tor network. TorBirdy automatically enhances the privacy settings of Thunderbird and configures it for use over Tor -- think of it as Torbutton for Thunderbird. To install it you can start Thunderbird and go to Tools and then select Add-ons. In the Search box on the right, type TorBirdy and press enter. You should see TorBirdy in the search results. Click on Install and then restart Thunderbird to complete the TorBirdy installation process. Or you could download torbirdy-current.xpi from https://dist.torproject.org/torbirdy/ TorBirdy requires Tor to be running at the same time. You can just open your already downloaded/installed TorBrowser before you open Thunderbird.
 
 
 
@@ -447,13 +446,13 @@ Note that even if a burner phone is not tied to your name, internet, or finances
 
 
 
-##PGP email
+##GPG email
 
 PGP (essentially the same thing as "GPG" and "GnuPG") is a small bit of software that constituted the first major encrpytion program on the early internet. Today it's most commonly used to encrypt emails, and most often with the program "Mozilla Thunderbird" and a plugin "Enigmail".
 
-PGP is an ancient and somewhat hard to use tool. Many users find it very confusing first use. It has engendered a lot of hate, most of it entirely deserved. Nevertheless PGP is an unparalleled and critical tool and activists who avoid learning it often severely hurt themselves as a consequence. We strongly advise you to use it.
+GPG is an ancient and somewhat hard to use tool. Many users find it very confusing first use. It has engendered a lot of hate, most of it entirely deserved. Nevertheless GPG is an unparalleled and critical tool and activists who avoid learning it often severely hurt themselves as a consequence. We strongly advise you to use it.
 
-PGP is a frequently superior encryption tool for a few reasons:
+GPG is a frequently superior encryption tool for a few reasons:
 
 1. It runs exclusively on your computer rather than your phone and computers are more securable than phones are.
 
@@ -461,15 +460,15 @@ PGP is a frequently superior encryption tool for a few reasons:
 
 3. It doesn't depend on a single centralized system, but runs on a preexisting and relatively decentralized network (email).
 
-4. It's relatively easy to set up anonymous email accounts and attach unique PGP keys to those accounts.
+4. It's relatively easy to set up anonymous email accounts and attach unique GPG keys to those accounts.
 
 5. It provides strong and clear ways to authenticate the people you're encrypting to.
 
 6. It doesn't require you to constantly trust a provider every time you open it.
 
-Signal fails to provide 1, 3, and 4. Other common encrypted messengers usually fail to provide 2 and often 5. Most "encrypted email" programs fail on 6. In practical experience this is often catastrophic for activists. When shit goes down and you need to send encrypted messages to others from something not tied to your or their identities (or revealing your location) you don't have the capacity to sit and wait online for both of you to come online at the same time. How do you even communicate to them *when* they should come online? We've watched this sort of situation prove catastrophic for activists who'd refused to learn PGP or forgotten. Similarly while the people who keep Signal afloat are heroes, it could easily be shut down at any point in a government crackdown.
+Signal fails to provide 1, 3, and 4. Other common encrypted messengers usually fail to provide 2 and often 5. Most "encrypted email" programs fail on 6. In practical experience this is often catastrophic for activists. When shit goes down and you need to send encrypted messages to others from something not tied to your or their identities (or revealing your location) you don't have the capacity to sit and wait online for both of you to come online at the same time. How do you even communicate to them *when* they should come online? We've watched this sort of situation prove catastrophic for activists who'd refused to learn GPG or forgotten. Similarly while the people who keep Signal afloat are heroes, it could easily be shut down at any point in a government crackdown.
 
-We will teach you to use PGP with Mozilla Thunderbird, an email client program that performs a similar function to Outlook. You may have your own favorite email software program (or use a web mail service like Gmail or Outlook.com). This guide won't tell you how to use PGP with these programs. We are are still generally skeptical for various reasons of those alternative PGP programs.
+We will teach you to use GPG with Mozilla Thunderbird, an email client program that performs a similar function to Outlook. You may have your own favorite email software program (or use a web mail service like Gmail or Outlook.com). This guide won't tell you how to use GPG with these programs. We are are still generally skeptical for various reasons of those alternative GPG programs.
 
 In addition to installing the software needed to use it, you will also need to create a private key, which you will keep private. The private key is what you will use to decrypt emails sent to you, and to digitally sign emails that you send to show they truly came from you. Finally, you'll learn how to distribute your public key—a small chunk of information that others will need to know before they can send you encrypted mail, and that they can use to verify emails you send.
 
@@ -601,7 +600,6 @@ This enables you to send unencrypted emails that unambiguously came from you and
 
 
 
-
 ##Signing Pseudonymous Communiques
 
 One major use that GPG can have for activists is to certify which actions were actually committed by a group. (To avoid being falsely accused of other actions.)
@@ -609,12 +607,9 @@ One major use that GPG can have for activists is to certify which actions were a
 You can sign the text of communiques using GPG without using email. And there are tools like gnu privacy assistant and cleopatra on mac that provide graphical interfaces for GPG to generate keys and manually sign (or encrypt) texts you want to be released. This provides your activist group with strong authentication of their communiques or statements.
 
 
+##Proving You Did Or Knew Something
 
-
-
-##Precommitments
-
-It's sometimes the case that you want to prove that you or your organization knew about something before it officially happened, without actually telling people beforehand. Your group may be secretive and you don't want to give press conferences, but you also don't want other people to be able to undertake actions and blame them on you or falsely take credit for actions your secretive group took.
+It's sometimes the case that you want to prove that you or your organization knew about something before it officially happened, without actually telling people beforehand. Your group may be secretive and you don't want to give press conferences, but you also don't want other people to be able to undertake actions and blame them on you or falsely take credit for actions your secretive group took. 
 
 To do this you can use a cryptographic tool to create a "hash" of a message, publish the hash to a site that adds timestamps, and then later publish the message itself. So for example you could post to twitter or a pastebin style site the hash "22a4e73e917bcb383466ddad4181b2f49c17827d0ddb907c853cccc23c7d8a56" a week before your bakesale and then after you've done the bakesale post "We, the housewives of Toledo, claim responsibility for the bakesale that will happen tuesday".
 
@@ -798,7 +793,7 @@ It has been the case countless times that a quasi-underground group or an activi
 
 This is because every PDF, document, audio file, video, or image you create or save from the internet is marked with additional information. Your programs do this "to be helpful!" which is really incredibly odious. People go along with this because our society is brainwashed by the ideology of intellectual property. They just assume that everyone would want the world to know who created a file or edited it. So instead we're forced to live in a world where almost every program on your computer will mark a file with additional information about you, the user. It helps to never give your name when setting up your computer and registering a user account.
 
-But just to be safe before posting any file publicly activist organizations should strip them of this metadata. Unfortunately there are a huge number of ways to do this and little consistency across file types and operating systems. We could easily fill this entire zine twice over giving examples and guides. You pretty much have to search online for the ways to remove metadata in your specific situation.
+But just to be safe before posting any file publicly activist organizations should strip them of this metadata. Unfortunately there are a huge number of ways to do this and little consistency across file types and operating systems. We could easily fill this entire zine twice over giving examples and guides. You pretty much have to search online for the ways to remove metadata in your specific situation. If you're using Linux though you're in luck because the Metadata Anonymisation Toolkit (mat) comes packaged in Debian and Tails -- this is the best option for serious security concerns.
 
 Microsoft offers a "Document Inspector" for removing "personal or sensitive information" before you share an Office file. Windows lets you view and delete metadata from a file via the Properties dialog box. The quickest way is to click Properties > Details > Remove Properties and Personal Information > "Create a copy with all possible properties removed."
 
@@ -856,7 +851,11 @@ Finally remember that police aren't the only ones with the capacity to bug peopl
 
 ##Email, Listservs & Other Services
 
-There are many radical activists who provide email accounts or other services on their servers. Riseup.net is the most famous, trusted, and technologically advanced, with the most prominent track record of resistance to state survellience. However their servers are based in the US and it's a bad idea to centralize everyone into using a single service (that a fascistic government can just shut down).
+There are many radical activists who provide email accounts or other services on their servers. 
+
+Riseup.net is the most famous and technologically advanced. However their servers are based in the US and Canada and it's a bad idea to centralize everyone into using a single service (that a fascistic government can just shut down). Riseup has turned the user information over to the FBI in response to a warrant when Riseup deemed those users to be violation of their Terms and Service or using their services for "criminal" rather than "activist" ends.
+
+Some other radical providers are:
 
 ####Europe:
 actiu.info
@@ -894,7 +893,7 @@ Sarava.org
 ####West Asia:
 404team.org
 
-Again be aware that an email provider can't truly protect your email in transit between email servers (when you send emails), or protect your email when you login and view it via the web. They may use HTTPS and that's better than nothing but HTTPS is not secure.
+Again be aware that an email provider can't truly protect your email in transit between email servers (when you send emails), or protect your email when you login and view it via the web. They may use HTTPS and that's better than nothing but HTTPS is not bulletproof and attacks are common.
 
 
 
@@ -910,17 +909,21 @@ We would advise against using another party's service to backup your computer.  
 
 There is at present no good option for activists to edit documents securely over the internet. Every option has downsides.
 
-1) Use etherpad, there's a publicly hosted version at pad.riseup.net. If you enter a sufficiently random and long enough URL when creating your etherpad then it might be hard for some random visitor to Riseup.net to guess your pad. Since pad.riseup.net is served over HTTPS you get some very mild level of encryption -- an observer that can't break HTTPS or give itself an X509 Certificate wouldn't be able to see precisely *what* page or URL you were visiting at pad.riseup.net, however again basically any government can trivially break HTTPS (and a lot of non government actors too).
+1) Use Sandstorm, an open source set of productivity tools. However this will require you to have someone you trust with technical skills set up a copy on a server for you.
 
-2) Use Google docs. Ooph. Trusting Google is obviously not fucking remotely optimal. If you're gonna do this we suggest everyone using a gmail account they set up completely anonymously over Tor for the exclusive purpose of collaborative editing. And only access the google doc and that email over Tor. Still if some NSA goon ran an algorithm to find suspicious content or identify some keywords in your document they could get Google to insert malware into the page so when you access the google doc they try to hack you through your Tor browser. And obviously you can't use a Google doc with javascript turned off in Tor.
+2) Use etherpad, there's a publicly hosted version at pad.riseup.net. If you enter a sufficiently random and long enough URL when creating your etherpad then it might be hard for some random visitor to Riseup.net to guess your pad. Since pad.riseup.net is served over HTTPS you get some very mild level of encryption -- an observer that can't break HTTPS or give itself an X509 Certificate wouldn't be able to see precisely *what* page or URL you were visiting at pad.riseup.net, however again basically any government can trivially break HTTPS (and a lot of non government actors too).
 
-3) Use SpiderOak. If you're already using Spideroak to backup your files online with some measure of security then this is an easy choice. You can create a ShareRoom by choosing any number of folders from several of your computers. A ShareRoom may be accessed as a unique web URL or by entering a user's ShareID and RoomKey on the SpiderOak homepage – easily allowing people you invite to view your documents, pictures, movies, and so on. As you make additions or edits to the folders within a ShareRoom (no matter what computer those changes are made on), the changes are automatically updated to the ShareRoom. However there may be conflicts if multiple people are editing a file at the same time.
+3) Use Google docs. Ooph. Trusting Google is obviously not fucking remotely optimal. If you're gonna do this we suggest everyone using a gmail account they set up completely anonymously over Tor for the exclusive purpose of collaborative editing. And only access the google doc and that email over Tor. Still if some NSA goon ran an algorithm to find suspicious content or identify some keywords in your document they could get Google to insert malware into the page so when you access the google doc they try to hack you through your Tor browser. And obviously you can't use a Google doc with javascript turned off in Tor.
 
-4) Use SpiderOak Semaphor. This is supposedly a software platform SpiderOak has developed for business teams to collaborate. It sounds promising but is still very new and insufficiently tested.
+4) Use SpiderOak. If you're already using Spideroak to backup your files online with some measure of security then this is an easy choice. You can create a ShareRoom by choosing any number of folders from several of your computers. A ShareRoom may be accessed as a unique web URL or by entering a user's ShareID and RoomKey on the SpiderOak homepage – easily allowing people you invite to view your documents, pictures, movies, and so on. As you make additions or edits to the folders within a ShareRoom (no matter what computer those changes are made on), the changes are automatically updated to the ShareRoom. However there may be conflicts if multiple people are editing a file at the same time.
 
-5) Use OwnCloud. If someone in your group has serious technical skills they can set up a private server and run an open source program called OwnCloud that offers collaborative document editing over encryption. However this is extremely new and unvetted software. https://owncloud.org/
+5) Use SpiderOak Semaphor. This is supposedly a software platform SpiderOak has developed for business teams to collaborate. It sounds promising but is still very new and insufficiently tested.
 
-6) Use Gobby. If everyone in your group has some technical skills then you can download the open source program Gobby which provides a client (an app on your computer) and a server. Everyone downloads a text editor and one person sets up a server, then folks connect and edit within the text editor app, presumably securely. However this is extremely new and unvetted software. https://gobby.github.io/
+6) Use OwnCloud. If someone in your group has serious technical skills they can set up a private server and run an open source program called OwnCloud that offers collaborative document editing over encryption. However this is extremely new and unvetted software. https://owncloud.org/
+
+7) Use Gobby. If everyone in your group has some technical skills then you can download the open source program Gobby which provides a client (an app on your computer) and a server. Everyone downloads a text editor and one person sets up a server, then folks connect and edit within the text editor app, presumably securely. However this is extremely new and unvetted software. https://gobby.github.io/
+
+
 
 We wish there were better or more developed options. Absolutely do not use any of these if you are facing high security threats (ie likely FBI investigation). Remember that the ease of a tool can be seductive and encourage bad security decisions.
 
@@ -1088,7 +1091,7 @@ reddit.com/r/darknetmarkets/wiki/superlist
 
 https://www.deepdotweb.com/2013/10/28/updated-llist-of-hidden-marketplaces-tor-i2p/
 
-There are some new cryptocurrencies being worked on (namely ZeroCoin and Zcash) that attempt to build anonymity into the currency from start. These are still fledgeling cryptocurrencies. Zcash conceals the amount of money sent in each transaction, whereas Zcoin does not. So Zcash is less prone to privacy timing attacks than Zcoin. On the other hand, this comes with a big tradeoff for Zcash, in the form of potentially undetected hyper-inflation in Zerocash’s money supply.
+There are some new cryptocurrencies being worked on (namely Zcoin and Zcash, implementing the ZeroCoin and ZeroCash protocols) that attempt to build anonymity into the currency from start. These are still fledgeling cryptocurrencies. Zcash conceals the amount of money sent in each transaction, whereas Zcoin does not. So Zcash is less prone to privacy timing attacks than Zcoin. On the other hand, this comes with a big tradeoff for Zcash, in the form of potentially undetected hyper-inflation in Zcash’s money supply. Zcash has the more famous developers.
 
 
 
